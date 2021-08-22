@@ -1,2 +1,2 @@
-# Merenje-temperature-u-automobilu
+# Ime
 Projekat iz predmeta Autoelektronika
