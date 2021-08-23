@@ -1,6 +1,6 @@
-#Autoelektronika-projekat
+#1.Autoelektronika-projekat
 
-##Uvod
+##1.1 Uvod
 
 Zadatak ovog projekta je da simulira sistem za merenje temperature u automobilu, u radnom okruženju VisualStudio2019. Projekat je urađen po MISRA standardu.
 
