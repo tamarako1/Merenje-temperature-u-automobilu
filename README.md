@@ -1,6 +1,9 @@
 #Autoelektronika-projekat
+
 ##Uvod
+
 Zadatak ovog projekta je da simulira sistem za merenje temperature u automobilu, u radnom okruženju VisualStudio2019. Projekat je urađen po MISRA standardu.
+
 ##Zahtevi projekta:
 1.Trenutne vrednosti temperature potrebno je dobiti sa kanala 0 serijske komunikacije. Primati odvojeno po 1 podatak za unutrašnju temperaturu i 1 podatak za spoljašnju temperaturu. Temperatura se dobija kao vrednost otpornosti u opsegu od 0-32 oma. 
 2. Pratiti vrednosti obe temperature, uzimati poslednjih 5 očitavanja i usrednjavati ih.
