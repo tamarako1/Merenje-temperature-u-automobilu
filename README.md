@@ -65,17 +65,3 @@ Za ispis vrednosti temperature i otpornosti na LCD displej potrebno je pritisnut
 - task pomocu kojeg se ispisuju vrednosti spoljasnje temperature i otpornosti na seg7_mux, kada preuzme odgovarajući semafor.
 ### main_demo 
 - predstavlja funkciju u kojoj se vrši inicijalizacija svih periferija koje se koriste, kreiraju se taskovi, semafori, redovi i tajmer. Takođe se definiše interrupt za serijsku komunikaciju i poziva vTaskStartScheduler() funkcija potrebna za raspoređivanje taskova.
-
-### Misra pravila
-
-Zadatak projekta bio je da program bude u skladu sa MISRA pravilima.         
-Sva pravila su ispoštovana osim sledećih: 
-
-  Pravila 11.2 i 2.7 ignorisemo.
-
-  Pravila 11.4, 11.6, 14.4, 15.6, 2.2 javljaju se kod davanja i uzimanja semafora, nisu ispoštovana.
-
-  Pravila 11.1, 4.6, 10.4 kod kreiranja taskova ignorisemo.
-
-  Pravilo 8.4 u liniji 918 nije ispoštovano iz nepoznatog razloga.
-
