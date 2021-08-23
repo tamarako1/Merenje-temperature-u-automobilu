@@ -1,3 +1,11 @@
+/*MISRA pravila koja nisu ispostovana:
+11.2 ignorisemo
+2.7 ukazuje na parametar funkcije koji se ne koristi
+11.4, 11.6, 14.4, 15.6, 2.2 javljaju se kod davanja i uzimanja semafora
+11.1, 4.6, 10.4 kod kreiranja taskova ignorisemo
+8.4 u liniji 928 javlja se iz nama nepoznatog razloga
+*/
+
 /* Standard includes. */
 #include <stdio.h>
 #include <conio.h>
@@ -117,7 +125,7 @@ static void SerialSend_Task2(const void* pvParameters)
 		}
 	}
 }
-//funkcija za prijem vrednosti temperature sa senzora
+//funkcija za prijem vrednosti otpornosti sa senzora
 static void SerialReceiveTask_0(const void* pvParameters)
 {
 	static uint16_t r_buffer[R_BUF_SIZE]; //niz za prijem podataka sa kanala1 
@@ -203,7 +211,7 @@ static void SerialReceiveTask_0(const void* pvParameters)
 		}
 	}
 }
-//Task za ogranicavanje zadavanje minimalne i maksimalne temperature i otpornosti, potrebnih za kalibraciju
+//Task za zadavanje minimalne i maksimalne temperature i otpornosti, potrebnih za kalibraciju
 //prijem podataka sa kanala 1, prima se u formatu \00MAXTEMP4012CR - gde je 40 temperatura, a 12 otpornost
 static void SerialReceiveTask_1(const void* pvParameters)
 {
@@ -425,6 +433,8 @@ static void prosecna_temp_sp(const void* pvParameters)
 	}
 }
 
+//Task u kojem se vrsi kalibracija temperature na osnovu vrednosti otpornosti unesene preko kanala 0
+//U ovom tasku realizovana je i signalizacija prekoracenja opsega dozvoljene temperature preko LED bara
 static void kalibracija(const void* pvParameters) {
 	
 	printf("KALIBRACIJA\n");
