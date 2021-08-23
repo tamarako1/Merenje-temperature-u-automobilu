@@ -61,7 +61,7 @@
 #define configUSE_APPLICATION_TASK_TAG			1
 #define configUSE_COUNTING_SEMAPHORES			1
 #define configUSE_ALTERNATIVE_API				0
-#define configUSE_QUEUE_SETS					8
+#define configUSE_QUEUE_SETS					10
 #define configUSE_TASK_NOTIFICATIONS			1
 #define configSUPPORT_STATIC_ALLOCATION			0
 
